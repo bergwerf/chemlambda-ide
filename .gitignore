@@ -1,0 +1,4 @@
+docs/_build
+.directory
+.DS_Store
+node_modules
