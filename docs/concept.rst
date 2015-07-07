@@ -17,10 +17,10 @@ graphic representation of lambda calculus developed by Marius Buliga.
 
 .. [1]
 
-   On a small level, chemical reactions are orchestrated by randomness. However,
-   when increasing the scale of the system, the ratio and speed of a certain
-   reaction can be predicted with high precision eliminating the notion of
-   randomness. Chemlambda uses this approach to simulate the reactions between
-   atoms and molecules.
+   In real chemistry the position and velocity of atoms does matter to calculate
+   the occurrence of reactions. Chemlambda takes a different approach. Just like
+   the biological reactions in cells that are performed by proteins and 'random'
+   collisions, Chemlambda reactions are based on which graph rewrites are
+   ultimately possible.
 
 .. bibliography:: /references.bib
