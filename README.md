@@ -2,6 +2,8 @@ Chemlambda IDE
 ==============
 This is the IDE for Chemlambda.
 
+To setup the Git hooks, please run `./setup.sh` from the root of the repository.
+
 License
 -------
 ```
