@@ -9,8 +9,17 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="author" content="Herman Bergwerf" />
 		<link rel="shortcut icon" href="favicon-32x32.png" />
-		<link type="text/css" rel="stylesheet" href="sit/molview-app.min.css" />
+		<link type="text/css" rel="stylesheet" href="lib/topcoat-desktop-dark.min.css" />
+		<link type="text/css" rel="stylesheet" href="src/styles/main.css" />
+		<script type="text/javascript" src="lib/paper-full.min.js"></script>
+		<script type="text/paperscript" src="src/scripts/main.js" canvas="chemlambda-canvas"></script>
 	</head>
 	<body>
+		<div id="chemlambda-view">
+			<canvas id="chemlambda-canvas" data-paper-resize="true"></canvas>
+		</div>
+		<div id="chemlambda-settings">
+			<h1><img src="src/images/logo.svg" alt=""/>Chemlambda</h1>
+		</div>
 	</body>
 </html>

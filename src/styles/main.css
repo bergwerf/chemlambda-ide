@@ -1,0 +1,43 @@
+#chemlambda-view
+{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 400px;
+	bottom: 0;
+	background: white;
+}
+
+#chemlambda-view > canvas
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#chemlambda-settings
+{
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 400px;
+}
+
+#chemlambda-settings > h1
+{
+	margin: 0;
+	padding: 10px 20px;
+	text-align: center;
+	color: white;
+	background: #333;
+}
+
+#chemlambda-settings > h1 > img
+{
+	float: left;
+	margin: 5px;
+	height: 30px;
+}
