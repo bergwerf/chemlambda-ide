@@ -11,8 +11,8 @@ gulp.task('watch-docs', ['build-docs'], function() {
 
 gulp.task('compress-js', function() {
 	return gulp.src('src/scripts/*.js')
-		.pipe(uglify())
 		.pipe(concat('main.min.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest('dist'));
 });
 
