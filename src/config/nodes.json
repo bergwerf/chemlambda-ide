@@ -1,0 +1,76 @@
+[
+	{
+		"color": "#9c27b0",
+		"label": "L",
+		"ports": [
+			"middle.in",
+			"left.out",
+			"right.out"
+		]
+	},
+	{
+		"color": "#8bc34a",
+		"label": "A",
+		"ports": [
+			"left.in",
+			"right.in",
+			"middle.out"
+		]
+	},
+	{
+		"color": "#9c27b0",
+		"label": "FI",
+		"ports": [
+			"left.in",
+			"right.in",
+			"middle.out"
+		]
+	},
+	{
+		"color": "#8bc34a",
+		"label": "FO",
+		"ports": [
+			"middle.in",
+			"left.out",
+			"right.out"
+		]
+	},
+	{
+		"color": "#ffeb3b",
+		"label": "FOE",
+		"ports": [
+			"middle.in",
+			"left.out",
+			"right.out"
+		]
+	},
+	{
+		"color": "#ff5722",
+		"label": "Arrow",
+		"ports": [
+			"middle.in",
+			"middle.out"
+		]
+	},
+	{
+		"color": "#212121",
+		"label": "T",
+		"ports": [
+			"middle.in"
+		]
+	},
+	{
+		"color": "#ffeb3b",
+		"label": "FRIN",
+		"ports": [
+			"middle.out"
+		]
+	},
+	{
+		"color": "#2196f3",
+		"label": "FROUT",
+		"ports": [
+			"middle.in"
+		]
+	}
+]

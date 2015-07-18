@@ -16,17 +16,20 @@
  * along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-var ChemlambdaIDEView = null;
-
-$(window).on('resize', function()
+/*
+Config format:
 {
-	if (ChemlambdaIDEView != null)
-	{
-		ChemlambdaIDEView.resize();
-	}
-});
+	"color": "#9c27b0",
+	"label": "L",
+	"ports": [
+		"middle.in",
+		"left.out",
+		"right.out"
+	]
+}
+*/
 
-$(document).on('ready', function()
+function Node(config)
 {
-	ChemlambdaIDEView = new View('chemlambda-view')
-});
+
+}

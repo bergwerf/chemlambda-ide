@@ -16,17 +16,13 @@
  * along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-var ChemlambdaIDEView = null;
-
-$(window).on('resize', function()
+function Tray(layer)
 {
-	if (ChemlambdaIDEView != null)
-	{
-		ChemlambdaIDEView.resize();
-	}
-});
+	this.layer = layer;
+	this.nodes = [];
+}
 
-$(document).on('ready', function()
+Tray.prototype.addNode(node)
 {
-	ChemlambdaIDEView = new View('chemlambda-view')
-});
+	this.nodes.push(node)
+}
