@@ -579,38 +579,10 @@ MPAtom.prototype.drawLabel = function()
 
 	if(this.isVisible())
 	{
-		if(this.mp.s.atom.colored)
-		{
-			this.mp.ctx.fillStyle = JmolAtomColorsHashHex[this.element] || JmolAtomColorsHashHex["C"];
-		}
-
-		if(this.mp.s.atom.miniLabel)
-		{
-			var s = this.mp.s.atom.miniLabelSize;
-			this.mp.ctx.fillRect(this.center.x - s / 2, this.center.y - s / 2, s, s);
-		}
-		else
-		{
-			var x = this.center.x + this.line.text.offsetLeft;
-
-			if(this.isotope > 0)
-			{
-				this.mp.setFont("isotope");
-				this.mp.ctx.fillText("" + this.isotope, x, this.center.y +
-						this.line.text.offsetTop - this.line.text.isotopeHeight);
-				x += this.line.text.isotopeWidth;
-			}
-
-			this.mp.setFont("element");
-			this.mp.ctx.fillText("" + this.element, x, this.center.y + this.line.text.offsetTop);
-			x += this.line.text.labelWidth;
-
-			if(this.charge !== 0)
-			{
-				this.mp.setFont("charge");
-				this.mp.ctx.fillText(this.getChargeLabel(), x, this.center.y +
-						this.line.text.offsetTop - this.line.text.chargeHeight);
-			}
-		}
+		this.mp.ctx.fillStyle = AtomColors[this.element] || "#000000";
+		this.mp.ctx.beginPath();
+		this.mp.ctx.arc(this.center.x, this.center.y, this.mp.s.atom.radius, 0, 2 * Math.PI);
+		this.mp.ctx.closePath();
+		this.mp.ctx.fill();
 	}
 }

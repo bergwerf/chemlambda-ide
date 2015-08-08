@@ -16,21 +16,23 @@
  * along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-var molpad;
-
-$(window).on('resize', function()
+function setupAtomToolbox()
 {
-	if (molpad != null)
+	var atoms = [ 'L', 'A', 'FI', 'FO', 'FOE', 'Arrow', 'T', 'FRIN', 'FROUT' ];
+	var toolbox = $('#atom-toolbox');
+	for (var i = 0; i < atoms.length; i++)
 	{
-		molpad.resize();
+		var input = $('<input type="radio" name="topcoat" />')
+		input.data('element', atoms[i])
+		input.on('click', function() {
+			molpad.setTool('atom', {
+				element: $(this).data('element')
+			});
+		});
+		$('<label class="topcoat-radio-button"></label>')
+			.append(input)
+			.append($('<div class="topcoat-radio-button__checkmark"></div>'))
+			.append($('<span></span>').text(atoms[i]))
+			.appendTo(toolbox)
 	}
-});
-
-$(document).on('ready', function()
-{
-	molpad = new MolPad('#chemlambda-view', window.devicePixelRatio || 1, {
-		undo: "",
-		redo: ""
-	});
-	setupAtomToolbox();
-});
+}

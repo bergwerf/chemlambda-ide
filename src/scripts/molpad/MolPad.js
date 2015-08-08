@@ -37,7 +37,7 @@ function MolPad(container, devicePixelRatio, buttons)
 	//active tool data
 	this.tool = {
 		type: "atom",//bond || fragment || chain || charge || erase || drag || select || atom
-		data: { element: "C" },
+		data: { element: "FROUT" },
 		selection: []//TMP
 	};
 

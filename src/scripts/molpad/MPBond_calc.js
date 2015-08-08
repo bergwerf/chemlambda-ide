@@ -52,17 +52,17 @@ MPBond.prototype.validate = function()
 
 			if(this.stereo === MP_STEREO_UP)
 			{
-				this.cache.bondColor = JmolAtomColorsHashHex["C"];
+				this.cache.bondColor = AtomColors["C"];
 			}
 			else if(f.element === t.element)
 			{
-				this.cache.bondColor = JmolAtomColorsHashHex[f.element] || JmolAtomColorsHashHex["C"];
+				this.cache.bondColor = AtomColors[f.element] || AtomColors["C"];
 			}
 			else
 			{
 				this.cache.bondColor = this.mp.ctx.createLinearGradient(f.getX(), f.getY(), t.getX(), t.getY());
-				this.cache.bondColor.addColorStop(this.mp.s.bond.gradient.from, JmolAtomColorsHashHex[f.element] || JmolAtomColorsHashHex["C"]);
-				this.cache.bondColor.addColorStop(this.mp.s.bond.gradient.to, JmolAtomColorsHashHex[t.element] || JmolAtomColorsHashHex["C"]);
+				this.cache.bondColor.addColorStop(this.mp.s.bond.gradient.from, AtomColors[f.element] || AtomColors["C"]);
+				this.cache.bondColor.addColorStop(this.mp.s.bond.gradient.to, AtomColors[t.element] || AtomColors["C"]);
 			}
 		}
 		else//fallback, this color is actually not used

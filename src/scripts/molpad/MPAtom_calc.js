@@ -135,67 +135,10 @@ MPAtom.prototype.calculateNewBondAngle = function(n)
  */
 MPAtom.prototype.calculateCenterLine = function()
 {
-	if(this.mp.s.atom.miniLabel)
-	{
-		return {
-			text: { offsetLeft: 0, offsetTop: 0 },
-			area: { point: true }
-		};
-	}
-
-	var scale = this.mp.s.atom.scale;
-	var text = {};
-
-	this.mp.setFont("element");
-	text.labelWidth = this.mp.ctx.measureText("" + this.element).width;
-	var w = text.labelWidth;
-
-	if(this.isotope > 0)
-	{
-		this.mp.setFont("isotope");
-		text.isotopeHeight = this.mp.s.fonts.isotope.fontSize * scale;
-		text.isotopeWidth = this.mp.ctx.measureText("" + this.isotope).width +
-				this.mp.s.atom.isotope.padding * scale;//padding before element label
-		w += text.isotopeWidth;
-	}
-
-	if(this.charge !== 0)
-	{
-		this.mp.setFont("charge");
-		text.chargeHeight = this.mp.s.fonts.charge.fontSize * scale;
-		text.chargeWidth = this.mp.ctx.measureText("" + this.getChargeLabel()).width;
-
-		//add padding between element and charge
-		text.labelWidth += this.mp.s.atom.charge.padding * scale;
-
-		//add chargeWidth to total width + additional label padding
-		w += text.chargeWidth + this.mp.s.atom.charge.padding * scale;
-	}
-
-	var h = this.mp.s.fonts.element.fontSize * scale;
-	var halfw = w / 2;
-	text.offsetLeft = -halfw;
-	text.offsetTop = h / 2;
-
-	if(w > this.mp.s.atom.circleClamp)
-	{
-		var pad = this.mp.s.atom.radius * scale - h / 2;
-		return {
-			text: text,
-			area: {
-				half: halfw + pad,
-				left: -halfw + pad,
-				right: halfw - pad
-			}
-		};
-	}
-	else
-	{
-		return {
-			text: text,
-			area: { point: true }
-		};
-	}
+	return {
+		text: { offsetLeft: 0, offsetTop: 0 },
+		area: { point: true }
+	};
 }
 
 /**

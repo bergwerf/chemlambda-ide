@@ -1,0 +1,55 @@
+#toolbox
+{
+	padding: 10px 20px;
+}
+
+.header
+{
+	position: relative;
+}
+
+.header:before
+{
+	content: '';
+	width: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 23px;
+	border-bottom: 1px solid #58595a;
+}
+
+.header h2
+{
+	font-weight: 300;
+	margin: 10px 0 25px;
+	font-size: 20px;
+	position: relative;
+	display: inline-block;
+	padding-right: 10px;
+	background: #4a4d4e;
+}
+
+@media screen and (min-width: 880px)
+{
+	.header:before
+	{
+		top: 30px;
+	}
+
+	.header h2
+	{
+		font-size: 28px;
+	}
+}
+
+.topcoat-radio-button
+{
+	display: block;
+	margin-bottom: 10px;
+}
+
+.topcoat-radio-button__checkmark
+{
+	margin-right: 5px;
+}
