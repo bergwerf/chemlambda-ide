@@ -2,75 +2,46 @@
 	{
 		"color": "#9c27b0",
 		"label": "L",
-		"ports": [
-			"middle.in",
-			"left.out",
-			"right.out"
-		]
+		"ports": [ "mi", "lo", "ro" ]
 	},
 	{
 		"color": "#8bc34a",
 		"label": "A",
-		"ports": [
-			"left.in",
-			"right.in",
-			"middle.out"
-		]
+		"ports": [ "li", "ri", "mo" ]
 	},
 	{
 		"color": "#9c27b0",
 		"label": "FI",
-		"ports": [
-			"left.in",
-			"right.in",
-			"middle.out"
-		]
+		"ports": [ "li", "ri", "mo" ]
 	},
 	{
 		"color": "#8bc34a",
 		"label": "FO",
-		"ports": [
-			"middle.in",
-			"left.out",
-			"right.out"
-		]
+		"ports": [ "mi", "lo", "ro" ]
 	},
 	{
 		"color": "#ffeb3b",
 		"label": "FOE",
-		"ports": [
-			"middle.in",
-			"left.out",
-			"right.out"
-		]
+		"ports": [ "mi", "lo", "ro" ]
 	},
 	{
 		"color": "#ff5722",
 		"label": "Arrow",
-		"ports": [
-			"middle.in",
-			"middle.out"
-		]
+		"ports": [ "mi", "mo" ]
 	},
 	{
 		"color": "#212121",
 		"label": "T",
-		"ports": [
-			"middle.in"
-		]
+		"ports": [ "mi" ]
 	},
 	{
 		"color": "#ffeb3b",
 		"label": "FRIN",
-		"ports": [
-			"middle.out"
-		]
+		"ports": [ "mo" ]
 	},
 	{
 		"color": "#2196f3",
 		"label": "FROUT",
-		"ports": [
-			"middle.in"
-		]
+		"ports": [ "mi" ]
 	}
 ]

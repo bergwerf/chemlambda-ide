@@ -16,17 +16,20 @@
  * along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-var ChemlambdaIDEView = null;
+var molpad;
 
 $(window).on('resize', function()
 {
-	if (ChemlambdaIDEView != null)
+	if (molpad != null)
 	{
-		ChemlambdaIDEView.resize();
+		molpad.resize();
 	}
 });
 
 $(document).on('ready', function()
 {
-	ChemlambdaIDEView = new View('chemlambda-view')
+	molpad = new MolPad('#chemlambda-view', window.devicePixelRatio || 1, {
+		undo: "",
+		redo: ""
+	});
 });

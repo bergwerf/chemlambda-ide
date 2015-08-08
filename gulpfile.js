@@ -10,14 +10,14 @@ gulp.task('watch-docs', ['build-docs'], function() {
 });
 
 gulp.task('compress-js', function() {
-	return gulp.src('src/scripts/*.js')
+	return gulp.src('src/scripts/**/*.js')
 		.pipe(concat('main.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch-js', ['compress-js'], function() {
-	gulp.watch(['src/scripts/*.js'], ['compress-js']);
+	gulp.watch(['src/scripts/**/*.js'], ['compress-js']);
 });
 
 gulp.task('default', ['build-docs', 'compress-js']);

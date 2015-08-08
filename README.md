@@ -23,3 +23,6 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
 ```
+
+The editor is forked from MolView 2 and therefore subject of the MolView 2
+license. See: https://github.com/molview/molview-old/blob/unstable/LICENSE.md.
