@@ -642,14 +642,58 @@ MolPad.prototype.getHandler = function()
 			onPointerDown: function(e, mp)
 			{
 				var p = new MPPoint().fromRelativePointer(e, mp);
+
 				var atom = new MPAtom(mp, {
 					i: mp.mol.atoms.length,
 					x: p.x,
 					y: p.y,
-					element: mp.tool.data.element
+					element: mp.tool.data.element,
+					selected: true
 				});
 				mp.mol.atoms.push(atom);
-				mp.pointer.handler.scope = atom;
+
+				// Add port atoms.
+				if (AtomPorts[mp.tool.data.element] != undefined)
+				{
+					var ports = AtomPorts[mp.tool.data.element];
+					var steps = Math.PI * 2 / ports.length;
+					for (var i = 0; i < ports.length; i++)
+					{
+						var port = new MPAtom(mp, {
+							i: mp.mol.atoms.length,
+							x: p.x + Math.cos(i * steps) * mp.s.bond.length,
+							y: p.y + Math.sin(i * steps) * mp.s.bond.length,
+							element: ports[i],
+							selected: true
+						});
+						mp.mol.atoms.push(port);
+
+						var bond = new MPBond(mp, {
+							i: mp.mol.bonds.length,
+							from: atom.index,
+							to: port.index,
+							type: MP_BOND_DOUBLE,
+							stereo: MP_STEREO_NONE,
+							selected: true
+						});
+						mp.mol.bonds.push(bond);
+
+						atom.addBond(bond.index);
+						port.addBond(bond.index);
+					}
+
+					mp.sel.update();
+					mp.sel.center = p.clone();
+				}
+			},
+			onPointerMove: function(e, mp)
+			{
+				var p = new MPPoint().fromRelativePointer(e, mp);
+				mp.sel.rotate(p);
+			},
+			onPointerUp: function(e, mp)
+			{
+				mp.sel.clear();
 			}
 		};
 	}

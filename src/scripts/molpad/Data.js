@@ -16,20 +16,56 @@
  * along with MolView.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// in_col: #f6cf84
+// out_col: #6ecae5
+// red_col: #be66dd
+// green_col: #ade747
+// arrow_col: #f0bf26
+// term_col: #222
 var AtomColors = {
-	"L":     "#9c27b0",
-	"A":     "#8bc34a",
-	"FI":    "#9c27b0",
-	"FO":    "#8bc34a",
-	"FOE":   "#ffeb3b",
-	"Arrow": "#ff5722",
-	"T":     "#212121",
-	"FRIN":  "#ffeb3b",
-	"FROUT": "#2196f3",
-	"mi":    "#000000",
-	"mo":    "#000000",
-	"ri":    "#000000",
-	"ro":    "#000000",
-	"li":    "#000000",
-	"lo":    "#000000"
+	"L":     "#be66dd",
+	"A":     "#ade747",
+	"FI":    "#be66dd",
+	"FO":    "#ade747",
+	"FOE":   "#f6cf84",
+	"Arrow": "#f0bf26",
+	"T":     "#222222",
+	"FRIN":  "#f6cf84",
+	"FROUT": "#6ecae5",
+	"mi":    "#f6cf84",
+	"mo":    "#6ecae5",
+	"ri":    "#f6cf84",
+	"ro":    "#6ecae5",
+	"li":    "#f6cf84",
+	"lo":    "#6ecae5"
+};
+
+var AtomPorts = {
+	"L":     [ "mi", "lo", "ro" ],
+	"A":     [ "li", "ri", "mo" ],
+	"FI":    [ "li", "ri", "mo" ],
+	"FO":    [ "mi", "lo", "ro" ],
+	"FOE":   [ "mi", "lo", "ro" ],
+	"Arrow": [ "mi", "mo" ],
+	"T":     [ "mi" ],
+	"FRIN":  [ "mo" ],
+	"FROUT": [ "mi" ]
+};
+
+var AtomRadii = {
+	"L":     3,
+	"A":     3,
+	"FI":    3,
+	"FO":    3,
+	"FOE":   3,
+	"Arrow": 3,
+	"T":     3,
+	"FRIN":  3,
+	"FROUT": 3,
+	"mi":    1.5,
+	"mo":    1.5,
+	"ri":    1.5,
+	"ro":    1.5,
+	"li":    2,
+	"lo":    2,
 };

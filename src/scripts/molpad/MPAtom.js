@@ -550,21 +550,13 @@ MPAtom.prototype.drawStateColor = function()
 	{
 		var d = incorrect ? "incorrect" : (this.isSelected() ? "selected" : this.display);
 
+		this.mp.ctx.fillStyle = this.mp.s.atom[d].color;
 		this.mp.ctx.beginPath();
-		if(this.line.area.point)
-		{
-			this.mp.ctx.arc(this.center.x, this.center.y,
-					this.mp.s.atom.selectionRadiusScaled, 0, PI2);
-			this.mp.ctx.fillStyle = this.mp.s.atom[d].color;
-			this.mp.ctx.fill();
-		}
-		else
-		{
-			this.mp.ctx.moveTo(this.center.x + this.line.area.left, this.center.y);
-			this.mp.ctx.lineTo(this.center.x + this.line.area.right, this.center.y);
-			this.mp.ctx.strokeStyle = this.mp.s.atom[d].color;
-			this.mp.ctx.stroke();
-		}
+		this.mp.ctx.arc(this.center.x, this.center.y,
+			this.mp.s.atom.selectionRadiusScaled * AtomRadii[this.element],
+			0, PI2);
+		this.mp.ctx.closePath();
+		this.mp.ctx.fill();
 	}
 }
 
@@ -581,7 +573,8 @@ MPAtom.prototype.drawLabel = function()
 	{
 		this.mp.ctx.fillStyle = AtomColors[this.element] || "#000000";
 		this.mp.ctx.beginPath();
-		this.mp.ctx.arc(this.center.x, this.center.y, this.mp.s.atom.radius, 0, 2 * Math.PI);
+		this.mp.ctx.arc(this.center.x, this.center.y,
+			this.mp.s.atom.radius * AtomRadii[this.element], 0, 2 * Math.PI);
 		this.mp.ctx.closePath();
 		this.mp.ctx.fill();
 	}

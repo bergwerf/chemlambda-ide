@@ -287,7 +287,7 @@ MolPad.prototype.loadSettings = function()
              * magnfied using this value in order to scale to this bond length.
              * @type {Float}
              */
-			length: 55,
+			length: 80,
 
             /**
              * Default MPBond length for hydrogen atoms
