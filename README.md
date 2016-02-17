@@ -1,6 +1,10 @@
 Chemlambda IDE
 ==============
-This is the IDE for Chemlambda.
+This is the IDE for Chemlambda. It is only a proof-of-concept and due to a lack
+of time I am currently not developing it any further. Chemlambda is a graphic
+representation of lambda calculus created by Marius Buliga, see:
+http://chorasimilarity.github.io/chemlambda-gui/. Please feel free to fork this
+repository or create pull requests.
 
 To setup the Git hooks, please run `./setup.sh` from the root of the repository.
 
@@ -24,5 +28,5 @@ You should have received a copy of the GNU Affero General Public License
 along with the Chemlambda IDE.  If not, see <http://www.gnu.org/licenses/>.
 ```
 
-The editor is forked from MolView 2 and therefore subject of the MolView 2
-license. See: https://github.com/molview/molview-old/blob/unstable/LICENSE.md.
+The editor is forked from MolView 2.x and therefore subject of the MolView 2.x
+license. See: https://github.com/molview/molview-1st-gen/blob/master/LICENSE.md.
